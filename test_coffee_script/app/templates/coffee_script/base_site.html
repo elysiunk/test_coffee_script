@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Test marionette coffee scrpit</title>
+
+        <link href="{% static 'test_coffee_assets/css/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'test_coffee_assets/css/bootstrap.min.css' %}" rel="stylesheet">
+        <script src="{% static 'test_coffee_assets/js/vendor/jquery.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/bootstrap.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/json2.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/underscore.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/backbone.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/backbone.marionette.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/backbone.bootstrap-modal.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/backbone.syphon.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/vendor/backbone.syphon.min.js' %}"></script>
+
+
+        <script src="{% static 'test_coffee_assets/js/app.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/entities/contact.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/contacts_app.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/list/list_view.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/list/list_controller.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/show/show_view.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/show/show_controller.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/modal/modal_view.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/modal/modal_controller.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/edit/edit_view.js' %}"></script>
+        <script src="{% static 'test_coffee_assets/js/apps/contacts/edit/edit_controller.js' %}"></script>
+
+    </head>
+
+    <div class="container-fluid">
+        {% block maincontainer %}
+        {% endblock %}
+    </div>
+</html>

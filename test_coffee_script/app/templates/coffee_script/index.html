@@ -1,0 +1,104 @@
+{% extends "coffee_script/base_site.html" %}
+
+{% block maincontainer %}
+
+<div class="row">
+    <div class="col-lg-6">
+        <h3>Original document pages</h3>
+        <span id="main-region"></span>
+    </div>
+    <div class="col-lg-6" id="dialog-region"></div>
+</div>
+
+<script type="text/template" id="list-contact">
+    <td>
+        <%= firstName %>
+    </td>
+    <td>
+        <%= lastName %>
+    </td>
+    <td>
+        <button class="btn js-show">
+            Show
+        </button>
+        <button class="btn js-popover">
+            Popover
+        </button>
+        <button class="btn js-modal">
+            modal
+        </button>
+        <button class="btn js-edit">
+            edit
+        </button>
+    </td>
+</script>
+
+<script type="text/template" id="table-contact">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+ </script>
+
+<script type="text/template" id="show-detail">
+    First name :
+    <strong><%= firstName %></strong>
+    <br>
+    Last name :
+    <strong><%= lastName %></strong>
+    <br>
+    Phone number :
+    <strong><%= phoneNumber %></strong>
+    <br>
+    <button class="btn ok">OK</button>
+</script>
+
+<script id="modal-view-template" type="text/html">
+    First name :
+    <strong><%= firstName %></strong>
+    <br>
+    Last name :
+    <strong><%= lastName %></strong>
+    <br>
+    Phone number :
+    <strong><%= phoneNumber %></strong>
+</script>
+
+<script type="text/html" id="edit_contact">
+<h3> Edit <%= firstName %> <%= lastName %> </h3>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="firstName" class="col-lg-2 control-label">firstName</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" id="firstName" name="firstName" value="<%= firstName %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName" class="col-lg-2 control-label">LastName</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" id="lastName" name="lastName" value="<%= lastName %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber" class="col-lg-2 control-label">Phone number</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" value="<%= phoneNumber %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-2">
+      <button class="btn js-submit">save in</button>
+    </div>
+  </div>
+</form>
+</script>
+
+ <script type="text/javascript">
+    ContactManager.start();
+ </script>
+{% endblock %}
